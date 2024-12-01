@@ -95,6 +95,60 @@ python3 -m devgagan
 Visit [Terms](https://github.com/devgaganin/Save-Restricted-Content-Bot-Repo/blob/master/TERMS_OF_USE.md) and accept the guidelines.
 
 # Updates
+---
+
+## Update: 21 NOV 2024
+
+**Enhanced Functionality for Public Channels:**
+
+1. Removed the unnecessary login requirement for processing links from public channels.  
+2. Users can now process both single and batch links from public channels, even without logging in or setting up a default session.  
+3. Introduced batch size limit variables: `FREEMIUM_LIMIT` and `PREMIUM_LIMIT`. These variables allow you to manage and customize the batch size accessible to users based on their subscription type.
+
+**👉 Note:**  
+If you set the `FREEMIUM_LIMIT` value to 0, users will not be able to extract links, even with a single link. The `OWNER_ID(s)` are exempt from these limitations.
+
+#repo_updated
+
+---
+## Update: 20 Nov 2024
+
+**🚀 Changelogs :**
+
+- **Batch Process**: Prevents starting new batch if one is already running.
+- **Single Link**: Checks if a process is ongoing before accepting a new link.
+- **UserBot Management**: Safely stops `userbot` after all processes.
+- **/cancel**: Improved to stop active processes with better feedback.
+- **Loop Management**: Prevents overlapping processes for the same user.
+- **Bug Fixes**: Fixed issues with `userbot` not stopping correctly.
+---
+
+## Update: 16 Nov 2024
+
+**Changelog:**  
+1. **Fixed .MOV Issue:**  
+   - Resolved the problem with `.MOV` files. All video files sent as documents will now be uploaded as streamable videos.  
+   - The repository can now function as a **file-to-video converter** as well.  
+
+2. **Filename Replacement:**  
+   - Fixed issues with filename replacements.  
+   - Made minor adjustments to captions to preserve the original formatting.  
+
+**Branch:** `v3`  
+
+**Status:** Complete ✅
+
+## Update: Nov 15 2024
+- fixed reset button to clear everything
+- topic group extraction fixed
+note : if you are extracting from public group then you must use the group id instead of username use apps like `turbotel` or anyother to do get id and replace for ex
+suppose main post link is
+`https://t.me/username/12` or `https://t.me/username/6/12 (topic enabled group)
+` then you have to change like below
+`https://t.me/c/1346789/12` or `https://t.me/c/1346789/6/12 (topic enabled group)`
+where `1346789` is group id you get from telegram client apps like `turbotel, plus messenger` etc
+
+---
 ## Update: 16 Aug 2024
 
 - Added `/logout` command to delete the session files from `mongodb` and `local memory`
